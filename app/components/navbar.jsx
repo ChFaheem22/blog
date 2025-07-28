@@ -14,7 +14,7 @@ const Navbar = () => {
           Faheem Blogs
         </Link>
 
-        {/* Hamburger icon (shown only on mobile) */}
+        {/* Hamburger icon */}
         <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
           ☰
         </button>
@@ -26,13 +26,10 @@ const Navbar = () => {
           <li><Link href="/authblog" onClick={() => setIsOpen(false)}>Blog Post</Link></li>
           <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
           <li><Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+          <li className="theme"><ThemeToggle /></li>
         </ul>
       </nav>
 
-      {/* Theme toggle stays always visible */}
-      <div className="theme">
-        <ThemeToggle />
-      </div>
     </header>
   );
 };
